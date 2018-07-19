@@ -1,0 +1,32 @@
+@import "../../common/variable";
+page {
+  width: 100%;
+}
+.scroll-wrap {
+  width: 100%;
+  .scroll-in {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .s-i-item {
+      border-left: 1rpx solid #bfbfbf;
+      word-break: keep-all;
+      padding: 30rpx 20rpx;
+      background-color: #eee;
+      transition: all 0.5s;
+    }
+    .active {
+      color: #fff;
+      background-color: @mainBackgroundColor;
+    }
+  }
+}
+
+.left-pillar {
+  padding-left: 40rpx;
+  &:after {
+    left: 20rpx;
+    height: 47rpx;
+    width: 10rpx;
+  }
+}

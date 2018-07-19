@@ -1,0 +1,135 @@
+@import "../../common/variable";
+page {
+  width: 100%;
+}
+.top-img {
+  width: 100%;
+}
+
+.info {
+  padding-left: 20rpx;
+  .i-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30rpx 0;
+    padding-right: 20rpx;
+    .i-i-left {
+      &:before {
+        color: @mainTextColor;
+        margin-right: 25rpx;
+      }
+    }
+    .i-i-right {
+      flex: 1;
+    }
+    .icon-yiwen {
+      padding: 10rpx;
+      //margin-left: 10rpx;
+      &:before {
+        color: #ffad0e;
+      }
+    }
+  }
+}
+
+.explanation {
+  padding-left: 20rpx;
+  border-top: 10rpx solid @tabBgColor;
+  border-bottom: 10rpx solid @tabBgColor;
+  .ex-title {
+    padding: 30rpx 0;
+  }
+  .f28 {
+    padding: 20rpx 0;
+  }
+}
+.ex-img {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  image {
+    width: 345rpx;
+    margin: 5rpx;
+  }
+}
+
+.fabu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: @mainTextColor;
+}
+
+.mask {
+  .pay-mask-in {
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .close {
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 100%);
+    }
+    .icon-icon {
+      display: flex;
+      align-items: center;
+      &:before {
+        color: #ef4e4d;
+        margin-right: 10rpx;
+      }
+    }
+    .ruler {
+      color: #ea524f;
+    }
+    .money {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      .money-item {
+        margin: 10rpx 15rpx;
+        padding: 20rpx 40rpx;
+        border: 1rpx solid #7d7d7d;
+        transition: all 0.5s;
+      }
+      .main-text-color {
+        color: @mainTextColor;
+        border-color: @mainBackgroundColor;
+      }
+    }
+    .pay {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .br10 {
+        padding: 20rpx 30rpx;
+        border: 2rpx solid #7d7d7d;
+        display: flex;
+        align-items: center;
+        &:before {
+          margin-right: 20rpx;
+          font-size: 40rpx;
+        }
+      }
+      .icon-weixinzhifu {
+        &:before {
+          color: #1ba337;
+        }
+      }
+      .icon-qiandai {
+        &:before {
+          color: #f34e4a;
+        }
+      }
+      .active {
+        border-color: @mainBackgroundColor;
+      }
+    }
+    .payNow {
+      background-color: @mainBackgroundColor;
+    }
+  }
+}

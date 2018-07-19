@@ -1,0 +1,59 @@
+<image class="top-img" mode="widthFix" src="{{ testImg }}"></image>
+<view class="info">
+  <view class="i-item bd1 f30 c333"
+        wx:key="*4"
+        wx:for="{{ infoArr }}">
+    <view class="i-i-left jwq {{ item.i }}">{{ item.l }}</view>
+    <view catchtap="{{ index == 3 ? 'maskChange' : '' }}" class="i-i-right tar">{{ index == 3 ? payMoney ? payMoney : item.r : item.r }}</view>
+    <navigator url="../ruler/ruler" class="{{ item.ruler ? 'jwq icon-yiwen' : '' }}"></navigator>
+  </view>
+</view>
+<view class="explanation">
+  <view class="ex-title bd1 f30 c333">活动说明</view>
+  <view class="f28 c666">a;sdkfasljdflasdjfasdjfasd;lfjkasdlfjasdlf;jasd;fljasdf</view>
+</view>
+<view class="ex-img p20">
+  <image catchtap="showImg"
+         data-src="{{ testImg }}"
+         wx:for="1234"
+         wx:key="*5"
+         mode="widthFix" src="{{ testImg }}"></image>
+</view>
+<view class="zw"></view>
+<view catchtap="apply" class="fabu tac lh80 cfff f36">报名</view>
+
+<view class="mask" wx:if="{{ maskShow }}">
+  <view class="pay-mask-in pa">
+    <view catchtap="maskChange"
+          class="close jwq icon-guanbi pa"></view>
+    <view class="mask-title f36 c333 tac lh80 bd1">确认付款</view>
+    <view class="f30 c333 lh50 p20">请选择支付的契约金额度</view>
+    <view class="money p20">
+      <view wx:for="{{ moneyArr }}"
+            wx:key="*8"
+            data-index="{{ index }}"
+            catchtap="moneyChoose"
+            data-type="money"
+            class="money-item tac br10 f32 c666 {{ currentMoney == index ? 'main-text-color' : '' }}">
+        {{ item }}元
+      </view>
+    </view>
+    <view class="tips bd1 p20 f24 c666 jwq icon-icon">契约金越高，完成获得的奖金越高，详见<navigator url="../ruler/ruler" class="ruler">规则说明</navigator></view>
+    <view class="f30 c333 p20">请选择支付方式</view>
+    <view class="pay f32 c333 p20">
+      <view catchtap="moneyChoose"
+            data-type="other"
+            class="br10 jwq icon-weixinzhifu {{ payChoose == 0 ? 'active' : '' }}"
+            data-index="0">微信支付</view>
+      <view catchtap="moneyChoose"
+            data-type="other"
+            class="br10 jwq icon-qiandai {{ payChoose == 1 ? 'active' : '' }}"
+            data-index="1">账户余额</view>
+    </view>
+    <view catchtap="payNow" class="payNow tac lh80 cfff f32">立即付款</view>
+  </view>
+</view>
+<!--错误弹窗-->
+<import src="../template/template"></import>
+<template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>
+<template wx:if="{{ FuckU.show != 1 }}" is="showGZH" data="{{ ...FuckU, notDel }}"></template>

@@ -1,0 +1,11 @@
+<view class="f30 c333 lh50 p20 bd1">获得勋章</view>
+<veiw class="p200 out">
+  <view wx:for="12341234" wx:key="*12" class="tac out-item">
+    <image mode="widthFix" src="{{ testImg }}"></image>
+    <view class="f26 c333">asdfasdf</view>
+  </view>
+</veiw>
+<!--错误弹窗-->
+<import src="../template/template"></import>
+<template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>
+<template wx:if="{{ FuckU.show != 1 }}" is="showGZH" data="{{ ...FuckU, notDel }}"></template>

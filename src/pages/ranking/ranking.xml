@@ -1,0 +1,26 @@
+<view class="tab-wrap bd1 tac">
+  <view catchtap="tabChoose"
+        data-index="{{ index }}"
+        class="f32 tab-item tac c333 {{ currentTan == index ? 'active cfff' : '' }}"
+        wx:for="{{ tabArr }}"
+        wx:key="*1">{{ item }}</view>
+</view>
+<view class="ranking-wrap">
+  <view wx:for="12345" wx:key="*788" class="p020 bgfff r-content">
+    <view class="r-left">
+      <image wx:if="{{ index <= 2 }}" src="../../images/ranking_{{ index }}.png"></image>
+      <view class="f28 c333" wx:else>{{ index }}</view>
+    </view>
+    <view class="r-center">
+      <image src="{{ testImg }}"></image>
+    </view>
+    <view class="r-right f30 c333 bd1">
+      <view>asdf</view>
+      <view>里程数:<text class="main-text-color">35.56</text>公里，累计打卡<text style="color: #ffad0e;">50</text>次</view>
+    </view>
+  </view>
+</view>
+<!--错误弹窗-->
+<import src="../template/template"></import>
+<template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>
+<template wx:if="{{ FuckU.show != 1 }}" is="showGZH" data="{{ ...FuckU, notDel }}"></template>

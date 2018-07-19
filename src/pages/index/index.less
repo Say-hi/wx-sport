@@ -1,0 +1,104 @@
+@import "../../common/variable";
+.banner {
+  width: 100%;
+  image {
+    width: 100%;
+  }
+}
+
+.tab-wrap {
+  display: flex;
+  align-items: center;
+  line-height: 98rpx;
+  border-top: 20rpx solid @tabBgColor;
+  .tab-item {
+    flex: 1;
+    transition: all 0.5s;
+  }
+  .active {
+    background-color: @mainBackgroundColor;
+  }
+}
+
+.activity-wrap {
+  .a-w-item {
+    border-bottom: 10rpx solid @tabBgColor;
+    .a-w-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20rpx;
+      image {
+        max-width: 68rpx;
+        margin-right: 30rpx;
+      }
+      .a-w-t-t {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .a-w-center {
+      overflow: hidden;
+      image {
+        width: 100%;
+      }
+      .a-w-c-status {
+        top: 0;
+        left: 30rpx;
+        background-color: #ffad0e;
+        padding: 14rpx 20rpx;
+        border-bottom-right-radius: 10rpx;
+        border-bottom-left-radius: 10rpx;
+      }
+      .a-w-c-card {
+        bottom: 20rpx;
+        right: 40rpx;
+        background-color: @mainBackgroundColor;
+        padding: 7rpx 24rpx;
+        border-radius: 25rpx;
+      }
+    }
+    .a-w-bottom {
+      .a-w-b-t {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.theme-wrap {
+  padding-left: 20rpx;
+  .t-w-item {
+    padding: 20rpx;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 10rpx solid @tabBgColor;
+    .t-w-i-left {
+      margin-right: 24rpx;
+      .t-w-i-l-status {
+        top: 0;
+        left: 30rpx;
+        background-color: #ffad0e;
+        padding: 14rpx 20rpx;
+        border-bottom-right-radius: 10rpx;
+        border-bottom-left-radius: 10rpx;
+      }
+      image {
+        width: 254rpx;
+      }
+    }
+    .t-w-i-right {
+      .t-w-i-t {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20rpx;
+      }
+    }
+  }
+}
+
+

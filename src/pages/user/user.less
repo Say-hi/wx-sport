@@ -1,0 +1,79 @@
+@import "../../common/variable";
+page {
+  background-color: #eeeeee;
+}
+
+.user-top {
+  background-color: @mainBackgroundColor;
+  display: flex;
+  align-items: center;
+  padding: 40rpx 20rpx;
+  .user-img-out {
+    width: 86rpx;
+    height: 86rpx;
+    overflow: hidden;
+    border: 6rpx solid #9ee5bc;
+    margin-right: 20rpx;
+  }
+  .user-img {
+    width: 86rpx;
+    height: 86rpx;
+  }
+  .user-t-r {
+    flex: 1;
+  }
+  .u-t-r-b {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.user-operation {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: 10rpx solid @tabBgColor;
+  .jwq {
+    width: 49%;
+    line-height: 97rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:before {
+      color: #ffad0e;
+      font-size: 40rpx;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-120%, -50%);
+    }
+  }
+  .icon-rili {
+    border-bottom: 2rpx dashed #bfbfbf;
+    border-right: 2rpx dashed #bfbfbf;
+  }
+  .icon-zhanghuziliao {
+    border-bottom: 2rpx dashed #bfbfbf;
+  }
+  .icon-paihangbang {
+    border-right: 2rpx dashed #bfbfbf;
+  }
+}
+
+.user-url {
+  padding-left: 20rpx;
+  background-color: #fff;
+  line-height: 106rpx;
+  .jwq {
+    display: flex;
+    align-items: center;
+    &:before {
+      color: @mainTextColor;
+      font-size: 40rpx;
+      margin-right: 20rpx;
+    }
+  }
+} 

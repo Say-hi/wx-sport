@@ -1,0 +1,70 @@
+<swiper autoplay
+        indicator-dots
+        circular
+        indicator-color="{{ indicatorColor }}"
+        indicator-active-color="{{ indicatorActiveColor }}"
+        class="banner">
+  <swiper-item  wx:for="123"
+                wx:key="*0">
+    <image mode="widthFix" src="{{ testImg }}"></image>
+  </swiper-item>
+</swiper>
+<view class="tab-wrap bd1 tac">
+    <view catchtap="tabChoose"
+          data-index="{{ index }}"
+          class="f32 tab-item tac c333 {{ currentTan == index ? 'active cfff' : '' }}"
+          wx:for="{{ tabArr }}"
+          wx:key="*1">{{ item }}</view>
+</view>
+<view wx:if="{{ currentTan == 0 }}" class="activity-wrap">
+    <navigator url="../activityDetail/activityDetail" class="p20 a-w-item" wx:for="1234" wx:key="*2">
+        <view class="a-w-top f30">
+            <view class="a-w-t-t">
+                <image class="br"
+                       mode="widthFix"
+                       src="{{ item.type == 'height' ? '../../images/height.png' : item.type == 'middle' ? '../../images/middle.png' : '../../images/low.png' }}"></image>
+                <view class="c333">高级活动|晨跑锻炼</view>
+            </view>
+            <view class="main-text-color">可获得奖金</view>
+        </view>
+        <view class="a-w-center br10 pr">
+            <view class="a-w-c-status pa cfff f26">进行中</view>
+            <image src="{{ testImg }}"
+                   mode="widthFix"></image>
+            <view class="a-w-c-card pa cfff f26">打卡</view>
+        </view>
+        <view class="a-w-bottom lh50">
+            <view class="a-w-b-t f30 c333">
+                <view>活动时间</view>
+                <view>参加人数</view>
+            </view>
+            <view class="a-w-b-t f26 c666">
+                <view>2018.07.05-2018.08.05</view>
+                <view class="main-text-color f30">20</view>
+            </view>
+        </view>
+    </navigator>
+</view>
+<view wx:if="{{ currentTan == 1 }}" class="theme-wrap">
+    <navigator url="../activityDetail/activityDetail" class="t-w-item" wx:for="124234" wx:key="*3">
+        <view class="pr t-w-i-left">
+            <view class="t-w-i-l-status pa f26 cfff">进行中</view>
+            <image mode="widthFix" src="{{ testImg }}"></image>
+        </view>
+        <view class="t-w-i-right f26 c666">
+            <view class="t-w-i-t f30 c333">
+                <view>兼职锻炼</view>
+                <view class="main-text-color">兼职锻炼</view>
+            </view>
+            <view>参加人数：20</view>
+            <view>活动时间：2018.07.05-2016.08.02</view>
+        </view>
+    </navigator>
+</view>
+<view class="zw"></view>
+<my-navigator-tab prop-nav="{{ tabArr2 }}"></my-navigator-tab>
+<!--错误弹窗-->
+<import src="../template/template"></import>
+<template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>
+<template wx:if="{{ needUserInfo }}" is="getUserInfo"></template>
+<template wx:if="{{ FuckU.show != 1 }}" is="showGZH" data="{{ ...FuckU, notDel }}"></template>

@@ -1,0 +1,65 @@
+@import "../../common/variable";
+.tab-wrap {
+  display: flex;
+  align-items: center;
+  line-height: 98rpx;
+  .tab-item {
+    flex: 1;
+    transition: all 0.5s;
+  }
+  .active {
+    background-color: @mainBackgroundColor;
+  }
+}
+
+.ranking-wrap {
+  .r-top {
+    display: flex;
+    background-color: #f4f4f4;
+    align-items: center;
+    .tac {
+      flex: 1;
+    }
+  }
+  .r-content {
+    display: flex;
+    align-items: center;
+    .r-left {
+      margin: 20rpx;
+      image {
+        width: 56rpx;
+        height: 63rpx;
+      }
+      view {
+        width: 56rpx;
+        line-height: 67rpx;
+        text-align: center;
+      }
+      .c333 {
+        background-color: #ffad0e;
+        line-height: 56rpx;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+      }
+    }
+    .r-center {
+      display: flex;
+      align-items: center;
+      margin: 0 20rpx;
+      image {
+        width: 84rpx;
+        height: 84rpx;
+        border-radius: 10rpx;
+        margin-right: 20rpx;
+      }
+      view {
+        flex: 1;
+      }
+    }
+    .r-right {
+      padding: 20rpx 0;
+      flex: 1;
+    }
+  }
+}

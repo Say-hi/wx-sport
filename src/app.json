@@ -1,0 +1,78 @@
+{
+//  群信息小程序页面分布
+  "pages": [
+    "pages/ranking/ranking", // 排行榜
+    "pages/hornor/hornor", // 获得荣誉
+    "pages/money/money", // 我的钱包
+    "pages/feedback/feedback", // 意见反馈
+    "pages/notice/notice", // 官方通知
+    "pages/user/user", // 我的
+    "pages/ruler/ruler", // 新手指南
+    "pages/activityDetail/activityDetail", // 活动报名
+    "pages/index/index" // 首页
+
+    // Dont remove this comment
+  ],
+  // Window configuration
+  // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#window
+  "window": {
+    // 类型：HexColor；默认值：#000000
+    // 导航栏背景颜色，如"#000000"
+    "navigationBarBackgroundColor": "#ffffff",
+    // 类型：String；默认值：white
+    // 导航栏标题颜色，仅支持 black/white
+    "navigationBarTextStyle": "black",
+    // 类型：String；默认值：无
+    // 导航栏标题文字内容
+    "navigationBarTitleText": "健身运动",
+    // 类型：HexColor；默认值：#ffffff
+    // 窗口的背景色
+    "backgroundColor": "#ffffff",
+    // 类型：String；默认值：dark
+    // 下拉背景字体、loading 图的样式，仅支持 dark/light
+    "backgroundTextStyle": "light",
+    // 类型：Boolean；默认值：false
+    // 是否开启下拉刷新，详见页面相关事件处理函数。
+    // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html?t=1476197491005#页面相关事件处理函数
+    "enablePullDownRefresh": false
+  },
+//  "tabBar": {
+//    "color": "#999999",
+//    "selectedColor": "#ff6501",
+//    "borderStyle": "white",
+//    "backgroundColor": "#fff",
+//    "list": [
+//      {
+//        "text": "首页",
+//        "pagePath": "pages/index/index",
+//        "iconPath": "images/index.png",
+//        "selectedIconPath": "images/index_hl.png"
+//      },
+////      {
+////        "text": "点餐",
+////        "pagePath": "pages/menu/menu",
+////        "iconPath": "images/menu.png",
+////        "selectedIconPath": "images/menu_hl.png"
+////      },
+//      {
+//        "text": "购物车",
+//        "pagePath": "pages/car/car",
+//        "iconPath": "images/car.png",
+//        "selectedIconPath": "images/car_hl.png"
+//      },
+//      {
+//        "text": "我的",
+//        "pagePath": "pages/user/user",
+//        "iconPath": "images/user.png",
+//        "selectedIconPath": "images/user_hl.png"
+//      }
+//    ]
+//  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  // Debug log to console
+  // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html#debug
+  "debug": true
+}

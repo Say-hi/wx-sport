@@ -1,0 +1,16 @@
+<scroll-view class="scroll-wrap"
+             scroll-x>
+  <view class="scroll-in bd1 bt1">
+    <view class="s-i-item f30 c333 {{ currentRuler == index ? 'active' : '' }}"
+          wx:key="*9"
+          catchtap="tabChoose"
+          data-index="{{ index }}"
+          wx:for="{{ rulerArr }}">{{ item.t }}</view>
+  </view>
+</scroll-view>
+<view class="left-pillar f32 c333 p20">{{ rulerArr[currentRuler].t }}</view>
+<view class="l52 f30 c333 p20">{{ rulerArr[currentRuler].c || '暂无相关说明' }}</view>
+<!--错误弹窗-->
+<import src="../template/template"></import>
+<template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>
+<template wx:if="{{ FuckU.show != 1 }}" is="showGZH" data="{{ ...FuckU, notDel }}"></template>
