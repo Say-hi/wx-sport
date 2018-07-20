@@ -11,7 +11,7 @@
   </view>
 </view>
 <view class="user-operation p20 f30 c333">
-  <navigator url="" class="jwq pr tac icon-rili">运动日记</navigator>
+  <navigator url="../diary/diary" class="jwq pr tac icon-rili">运动日记</navigator>
   <navigator url="../money/money" class="jwq pr tac icon-zhanghuziliao">我的账户</navigator>
   <navigator url="../ranking/ranking" class="jwq pr tac icon-paihangbang">运动排行榜</navigator>
   <navigator url="../hornor/hornor" class="jwq pr tac icon-rongyu">获得荣誉</navigator>

@@ -1,0 +1,45 @@
+<view class="tab-wrap bd1 tac">
+  <view catchtap="tabChoose"
+        data-index="{{ index }}"
+        class="f32 tab-item tac c333 {{ currentTan == index ? 'active cfff' : '' }}"
+        wx:for="{{ tabArr }}"
+        wx:key="*1">{{ item }}</view>
+</view>
+<view wx:if="{{ currentTan == 0 }}" class="title f32 c333">累计次数:<text style="color: #ffad0e;">50</text>次</view>
+<view wx:else class="title f32 c333">累计时间:<text style="color: #ffad0e;">15天20小时30分钟</text></view>
+<view class="r-time p20">
+  <view class="r-time-item" wx:for="12345" wx:key="*21" wx:for-item="item" wx:for-index="index">
+    <view class="r-t-left f32 c333">2018.07.09</view>
+    <view wx:if="{{ index <= 2 }}" class="r-t-right c333 f26">
+      <view class="r-t-r-item" wx:for="1234" wx:key="*22" wx:for-item="iItem" wx:for-index="iIndex">
+        <view class="r-t-r-time f30">09:00</view>
+        <view class="r-t-r-times">打卡第1次【高级活动】</view>
+        <view class="r-t-r-long">打卡时长:40分钟</view>
+      </view>
+    </view>
+    <view wx:else class="r-t-right c333 f26">
+      <view class="r-t-r-item noborder">
+        <view class="r-t-r-time f30">09:00</view>
+        <view class="r-t-r-times">奖金结算</view>
+        <view class="r-t-r-long">夏季兼职运动大赛</view>
+      </view>
+      <view class="r-t-r-item-record f26 c333 br10">
+        <view class="title bd1 tac lh40">获得奖金:<text style="color: #ffad0e;">1000</text>元</view>
+        <view class="r-bottom tac">
+          <view>
+            <text>参与人数</text>
+            <text class="f30">30</text>
+          </view>
+          <view>
+            <text>完成人数</text>
+            <text class="main-text-color f30">30</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--错误弹窗-->
+<import src="../template/template"></import>
+<template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>
+<template wx:if="{{ FuckU.show != 1 }}" is="showGZH" data="{{ ...FuckU, notDel }}"></template>

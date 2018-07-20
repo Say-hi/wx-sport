@@ -1,6 +1,9 @@
 {
 //  群信息小程序页面分布
   "pages": [
+    "pages/carDetail/carDetail", // 打卡记录详情
+    "pages/card/card", // 打卡
+    "pages/diary/diary", // 日记
     "pages/ranking/ranking", // 排行榜
     "pages/hornor/hornor", // 获得荣誉
     "pages/money/money", // 我的钱包
@@ -9,7 +12,7 @@
     "pages/user/user", // 我的
     "pages/ruler/ruler", // 新手指南
     "pages/activityDetail/activityDetail", // 活动报名
-    "pages/index/index" // 首页
+    "pages/index/index" // 首页,
 
     // Dont remove this comment
   ],

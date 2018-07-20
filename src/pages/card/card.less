@@ -1,0 +1,111 @@
+@import "../../common/variable";
+
+page {
+  background-color: #f6f6f6;
+}
+
+.tab-wrap {
+  display: flex;
+  align-items: center;
+  line-height: 98rpx;
+  .tab-item {
+    flex: 1;
+    transition: all 0.5s;
+  }
+  .active {
+    background-color: @mainBackgroundColor;
+  }
+}
+
+.work {
+  .left-pillar {
+    padding-left: 20rpx;
+    &:after {
+      width: 10rpx;
+      height: 47rpx;
+      left: 0;
+    }
+  }
+  .finish {
+    &:after {
+      background-color: #ffad0e;
+    }
+  }
+  .work-item {
+    background-color: #fff;
+    .w-i-bottom {
+      display: flex;
+      align-items: center;
+      @width: 132rpx;
+      .circle-out {
+        width: @width + 4;
+        height: @width + 4;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 20rpx;
+      }
+      .circle {
+        width: @width;
+        height: @width;
+        margin: 10rpx;
+        .circle-main1 {
+          top: 0;
+          left: 50%;
+          width: @width / 2;
+          height: @width;
+          z-index: 1;
+          overflow: hidden;
+          transform: translate(-100%, 0);
+          view {
+            width: @width - 8;
+            height: @width - 8;
+            border: 8rpx solid #00a0e9;
+          }
+        }
+        .circle-main2 {
+          top: 0;
+          left: 50%;
+          width: @width / 2;
+          height: @width;
+          overflow: hidden;
+          view {
+            width: @width - 8;
+            height: @width - 8;
+            border: 8rpx solid #00a0e9;
+            transform: translateX(-50%);
+          }
+          transform: translate(0, 0);
+          z-index:3;
+        }
+        .circle-left {
+          top: 0;
+          left: 50%;
+          transform-origin: right center;
+          //transform: translate(-100%, 0) rotateZ(0deg);
+          width: @width / 2 + 30;
+          height: @width;
+          background-color: #fff;
+          z-index: 2;
+        }
+        .circle-right {
+          top: 0;
+          left: 50%;
+          z-index: 4;
+          transform-origin: left center;
+          //transform: translate(0, 0) rotateZ(60deg);
+          background-color: #fff;
+          width: @width / 2 + 30;
+          height: @width;
+        }
+        .circle-text {
+          z-index: 5;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          word-break: keep-all;
+          color: #00a0e9;
+        }
+      }
+    }
+  }
+}

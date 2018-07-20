@@ -1,0 +1,99 @@
+@import "../../common/variable";
+page {
+  background-color: #f6f6f6;
+}
+.tab-wrap {
+  display: flex;
+  align-items: center;
+  line-height: 98rpx;
+  .tab-item {
+    flex: 1;
+    transition: all 0.5s;
+  }
+  .active {
+    background-color: @mainBackgroundColor;
+  }
+}
+
+.title {
+  padding: 40rpx 20rpx;
+  background-color: #fff;
+}
+
+.r-time-item {
+  display: flex;
+  .noborder {
+    border-left: 2rpx solid #f6f6f6 !important;
+  }
+  .r-t-left {
+    word-break: keep-all;
+  }
+  .r-t-right {
+    flex: 1;
+    .r-t-r-item {
+      position: relative;
+      padding-left: 20rpx;
+      margin-left: 20rpx;
+      border-left: 2rpx solid #bfbfbf;
+      .r-t-r-long {
+        padding-bottom: 40rpx;
+      }
+      &:nth-last-child(1) {
+        border-left: 2rpx solid #f6f6f6;
+      }
+      &:nth-child(1) {
+        margin-top: 2rpx;
+        &:before {
+          position: absolute;
+          content: '';
+          width: 4rpx;
+          height: 20rpx;
+          top: 0;
+          left: 0;
+          transform: translate(-50%, -50%);
+          background-color: #f6f6f6;
+        }
+      }
+      &:before {
+        position: absolute;
+        content: '';
+        width: 2rpx;
+        height: 20rpx;
+        top: 0;
+        left: 0;
+        transform: translate(-100%, -50%);
+        background-color: #bfbfbf;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        width: 20rpx;
+        height: 20rpx;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, 50%);
+        background-color: @mainBackgroundColor;
+        border-radius: 50%;
+      }
+    }
+    .r-t-r-item-record {
+      background-color: #fff;
+      transform: translateX(-16%);
+      margin-bottom: 20rpx;
+      .r-bottom {
+        display: flex;
+        align-items: center;
+        view {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          line-height: 50rpx;
+          &:nth-child(1) {
+            border-right: 1rpx solid #e5e5e5;
+          }
+        }
+      }
+    }
+  }
+}
