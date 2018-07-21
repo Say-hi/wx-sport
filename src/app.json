@@ -1,6 +1,9 @@
 {
 //  群信息小程序页面分布
   "pages": [
+    "pages/index/index", // 首页
+    "pages/siteCard/siteCard", // 位置打卡
+    "pages/picCard/picCard", // 活动打卡
     "pages/carDetail/carDetail", // 打卡记录详情
     "pages/card/card", // 打卡
     "pages/diary/diary", // 日记
@@ -11,9 +14,7 @@
     "pages/notice/notice", // 官方通知
     "pages/user/user", // 我的
     "pages/ruler/ruler", // 新手指南
-    "pages/activityDetail/activityDetail", // 活动报名
-    "pages/index/index" // 首页,
-
+    "pages/activityDetail/activityDetail" // 活动报名
     // Dont remove this comment
   ],
   // Window configuration

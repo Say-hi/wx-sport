@@ -1,0 +1,39 @@
+<view class="p20">
+  <view class="imgArea">
+    <view class="upImg">
+      <view class="pr" wx:for="{{ upImgArr }}" wx:key="*151">
+        <image catchtap="showImg" data-src="{{ item }}" mode="widthFix" src="{{ item }}"></image>
+        <view catchtap="del" data-index="{{ index }}" class="jwq icon-cuowu pa"></view>
+      </view>
+    </view>
+    <view class="tac f26 c333">
+      <view class="add-img" catchtap="addImg">+</view>
+      <view class="mt20">上传与打卡有关的图片</view>
+    </view>
+  </view>
+</view>
+<view class="chooseNum f30 c333 mt20">
+  <text>公里数:</text>
+  <picker bindchange="bindPickerChange" data-type="one" value="{{ one_index }}" range="{{ numArr }}">
+    <view class="picker f26 c999">
+      {{ numArr[one_index] || '0-99' }}
+      <text>▼</text>
+    </view>
+  </picker>
+  <text>.</text>
+  <picker bindchange="bindPickerChange" data-type="two" value="{{ two_index }}" range="{{ numArr }}">
+      <view class="picker f26 c999">
+        {{ numArr[two_index] || '0-99'}}
+        <text>▼</text>
+      </view>
+    </picker>
+</view>
+<view class="fabu tac">
+  <text class="f30 br10 cfff">提交打卡</text>
+</view>
+
+<my-navigator-tab prop-nav="{{ tabArr2 }}"></my-navigator-tab>
+<!--错误弹窗-->
+<import src="../template/template"></import>
+<template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>
+<template wx:if="{{ FuckU.show != 1 }}" is="showGZH" data="{{ ...FuckU, notDel }}"></template>

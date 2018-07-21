@@ -1,0 +1,61 @@
+@import "../../common/variable";
+
+page {
+  background-color: #f6f6f6;
+}
+
+.imgArea {
+  width: 100%;
+  .upImg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .pr {
+      width: 100%;
+    }
+    image {
+      width: 100%;
+      //margin: 14rpx;
+    }
+    .icon-cuowu {
+      top: 10rpx;
+      right: 10rpx;
+      &:before {
+        color: #cd9b00;
+        font-size: 40rpx;
+      }
+    }
+  }
+  .add-img {
+    display: inline-block;
+    border: 1rpx solid #dcdcdc;
+    color: #999;
+    background-color: #fff;
+    font-size: 120rpx;
+    line-height: 175rpx;
+    //font-weight: 700;
+    width: 175rpx;
+    height: 175rpx;
+  }
+}
+
+.chooseNum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .picker {
+    background-color: #fff;
+    border: 1rpx solid #eee;
+    padding: 20rpx;
+    margin: 0 5rpx;
+  }
+}
+
+.fabu {
+  margin-top: 50rpx;
+  .f30 {
+    background-color: @mainBackgroundColor;
+    padding: 30rpx 208rpx;
+  }
+}

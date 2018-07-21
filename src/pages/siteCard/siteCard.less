@@ -1,0 +1,99 @@
+@import "../../common/variable";
+page {
+  background-color: #f6f6f6;
+}
+.bgfff {
+  background-color: #fff;
+  .map {
+    width: 100%;
+    height: 600rpx;
+  }
+}
+
+.circle-wrap {
+  @width: 200rpx;
+  height: @width;
+  .out-circle {
+    height: @width;
+    width: @width;
+    background-color: #3cca78;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+  }
+  .in-circle {
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    height: @width - 30;
+    width: @width - 30;
+    background-color: #3cca78;
+    font-weight: normal;
+    view {
+      flex: 1;
+    }
+  }
+}
+
+.address {
+  button {
+    height: 80rpx;
+    line-height: 80rpx;
+  }
+}
+
+.card-record {
+  padding: 20rpx;
+  background-color: #fff;
+  .r-t-r-item {
+    position: relative;
+    padding-left: 20rpx;
+    margin-left: 20rpx;
+    border-left: 2rpx solid #bfbfbf;
+    .r-t-r-long {
+      padding-bottom: 40rpx;
+    }
+    &:nth-last-child(1) {
+      border-left: 2rpx solid #f6f6f6;
+    }
+    &:nth-child(1) {
+      //margin-top: 2rpx;
+      &:before {
+        position: absolute;
+        content: '';
+        width: 4rpx;
+        height: 20rpx;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+      }
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 2rpx;
+      height: 20rpx;
+      top: 0;
+      left: 0;
+      transform: translate(-100%, -50%);
+      background-color: #bfbfbf;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 20rpx;
+      height: 20rpx;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, 30%);
+      background-color: @mainBackgroundColor;
+      border-radius: 50%;
+    }
+  }
+}

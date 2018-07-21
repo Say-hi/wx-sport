@@ -1,0 +1,31 @@
+<view class="p20 bgfff">
+  <map class="map" circles="{{ circles }}" longitude="{{ longitude }}" latitude="{{ latitude }}" show-location="{{ showLocation }}">
+    <cover-view wx:if="{{ needSetting }}" class="mask">
+      <cover-view class="mask-in address">
+        <button open-type="openSetting" bindopensetting="openSetting">请授权获取您的位置信息</button>
+      </cover-view>
+    </cover-view>
+  </map>
+</view>
+<view class="tac f26 lh80 c333">请在打卡范围内进行打卡</view>
+<view class="card-record">
+  <view class="r-t-r-item f26 c333" wx:for="12" wx:key="*22" wx:for-item="iItem" wx:for-index="iIndex">
+    <view class="r-t-r-time">09:00</view>
+    <view class="r-t-r-times lh60">打卡地址:【高级活动】</view>
+  </view>
+</view>
+
+<view catchtap="record" class="circle-wrap pr">
+  <view class="br out-circle pa"></view>
+  <view class="br in-circle pa">
+    <view class="f30 cfff fw7 tac">{{ status ? '结束打卡' : '开始打卡' }}</view>
+  </view>
+</view>
+<view class="tac f26 lh80" style="color: #ef4e4d;">对不起，您不在打卡范围之内</view>
+
+
+<my-navigator-tab prop-nav="{{ tabArr2 }}"></my-navigator-tab>
+<!--错误弹窗-->
+<import src="../template/template"></import>
+<template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>
+<template wx:if="{{ FuckU.show != 1 }}" is="showGZH" data="{{ ...FuckU, notDel }}"></template>

@@ -7,14 +7,14 @@
 </view>
 <view class="work p20">
  <view class="out-title f32 c333 lh60 left-pillar">正在进行中的活动</view>
-  <view wx:for="{{ activityArr }}" wx:key="*23" class="work-item mt20 p20 br20 c333 f28">
+  <navigator url="{{ currentTan == 0 ? '../picCard/picCard' : '../siteCard/siteCard' }}" wx:for="{{ activityArr }}" wx:key="*23" class="work-item mt20 p20 br20 c333 f28">
     <view class="f30 w-i-title lh50">活动标题</view>
     <view class="w-i-bottom">
       <view class="circle-out pr">
         <view class="circle pr">
           <view class="pa circle-left" style="transform: translate(-100%, 0) rotateZ({{item.per > 50 ? 180 * (item.per - 50) / 50 : 0 }}deg);"></view>
           <view class="pa circle-main1">
-            <view class="br" style="border-color: {{ item.finish ? '#ffad0e' : '00a0e9' }};"></view>
+            <view class="br" style="border-color: {{ item.finish ? '#ffad0e' : '#00a0e9' }};"></view>
           </view>
           <view class="pa circle-main2">
             <view class="br" style="border-color: {{ item.finish ? '#ffad0e' : '00a0e9' }};"></view>
@@ -29,7 +29,7 @@
         <view>截止时间:2018.05.06</view>
       </view>
     </view>
-  </view>
+  </navigator>
 </view>
 
 <view class="work p20">
